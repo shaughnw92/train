@@ -1,0 +1,26 @@
+@mixin button($bg, $color) {
+	background-color: $bg;
+	border-color: $bg;
+	color: $color;
+	border-width: 0.5px;
+	text-transform: uppercase;
+	padding: 10px 20px;
+
+	&.active {
+		background-color: $color;
+		color: $bg;
+	}
+}
+
+@mixin font($weight, $face) {
+	font-family: $face;
+	font-weight: $weight;
+}
+
+@mixin transparency($color, $opacity: 1, $type: color) {
+	@if $type == 'background' {
+		#{$type}-color: rgba($color, $opacity);
+	} @else if $type == 'color' {
+		#{$type}: rgba($color, $opacity);
+	}
+}

@@ -1,0 +1,14 @@
+@import './mixins';
+
+$dot-matrix: #f18621;
+$light-blue: #0c9dc2;
+$blue: #0b2665;
+$white: #ffffff;
+$black: #000000;
+@mixin transparent-blue {
+	@include transparency($blue, 0.7, 'background');
+}
+
+@mixin transparent-black {
+	@include transparency(#000, 0.7, 'color');
+}

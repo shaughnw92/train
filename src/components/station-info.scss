@@ -1,0 +1,136 @@
+@import '../sass/colours';
+@import '../sass/fonts';
+@import '../sass/operators';
+
+.station {
+	&__container {
+		background-color: $blue;
+		border-bottom: 10px solid $light-blue;
+		display: inline-block;
+		height: 100px;
+		margin-top: 10px;
+		min-width: 300px;
+		padding: 10px 0;
+		width: 340px;
+
+		&--east-midlands-railway,
+		&--great-western-railway,
+		&--northern,
+		&--scotrail,
+		&--transport-for-wales,
+		&--west-midlands-railway {
+			background: $white;
+			box-shadow: 0px 0.5px 1.5px;
+		}
+
+		&--c2c {
+			background: linear-gradient(
+				to left,
+				$c2c-purple 0%,
+				$c2c-blue 20%,
+				$c2c-blue 100%
+			);
+		}
+
+		&--east-midlands-railway {
+			border-bottom: 15px solid $emr-purple;
+		}
+
+		&--great-western-railway {
+			border-bottom: 10px solid $gwr-green;
+		}
+
+		&--heathrow-express {
+			background: $heathex-purple;
+		}
+
+		&--lner {
+			border: 5px solid $lner-blue;
+		}
+
+		&--merseyrail {
+			border-bottom: 10px solid $merseyrail-grey;
+		}
+
+		&--northern {
+			border-bottom: 5px solid $northern-purple;
+		}
+
+		&--scotrail {
+			border-bottom: 10px solid $scotrail-blue;
+		}
+
+		&--southeastern {
+			background: $southeastern-blue;
+		}
+
+		&--tfl-rail {
+			background: $tfl-blue;
+		}
+
+		&--transpennine-express {
+			background: $tpex-blue;
+		}
+
+		&--transport-for-wales {
+			border-bottom: 5px solid $tfw-grey;
+		}
+
+		&--west-midlands-railway {
+			border-bottom: 5px solid $wmr-orange;
+		}
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__title,
+	&__info {
+		color: $white;
+
+		&--c2c,
+		&--heathrow-express,
+		&--scotrail,
+		&--southeastern,
+		&--tfl-rail,
+		&--transpennine-express {
+			color: $white;
+		}
+
+		&--lner,
+		&--merseyrail {
+			color: $black;
+		}
+
+		&--east-midlands-railway {
+			color: $emr-purple;
+		}
+
+		&--great-western-railway {
+			color: $gwr-green;
+		}
+
+		&--northern {
+			color: $northern-purple;
+		}
+
+		&--transport-for-wales {
+			color: $tfw-grey;
+		}
+
+		&--west-midlands-railway {
+			color: $wmr-orange;
+		}
+	}
+
+	&__title {
+		@include helvetica(700);
+	}
+
+	&__info {
+		font-size: 12px;
+		padding: 0 10px;
+		@include helvetica(400);
+	}
+}

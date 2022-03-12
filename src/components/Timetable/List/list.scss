@@ -1,0 +1,58 @@
+@import '../../../sass/transform';
+@import '../../../sass/colours';
+@import '../../../sass/fonts';
+
+.list {
+	background-color: #000;
+	display: flex;
+	flex-flow: column wrap;
+	margin: 5px;
+	padding: 5px;
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		margin: 0;
+	}
+
+	&__span {
+		display: block;
+	}
+
+	&__icon {
+		position: relative;
+		left: 5px;
+		top: 0;
+	}
+
+	&__row {
+		&--head {
+			padding: 10px 0;
+		}
+
+		background-color: #010101;
+		display: flex;
+		flex: 1;
+		flex-flow: row wrap;
+	}
+
+	&__column {
+		&--left {
+			flex: 0 0 87%;
+		}
+
+		&--right {
+			flex: 0 0 13%;
+		}
+
+		&--expanded {
+			flex: 0 0 50%;
+		}
+
+		display: inline-flex;
+		flex-flow: column wrap;
+		flex: 1;
+		padding-right: 10px;
+	}
+}

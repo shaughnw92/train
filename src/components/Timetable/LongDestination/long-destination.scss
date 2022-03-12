@@ -1,0 +1,76 @@
+@import '../../../sass/transform';
+@import '../../../sass/colours';
+@import '../../../sass/fonts';
+
+.long-destination {
+	background-color: rgba(#000, 0.9);
+	display: flex;
+	flex-flow: column wrap;
+	margin: 10px;
+	padding: 10px;
+	width: 50%;
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		margin: 0;
+		padding: 0;
+
+		&.tight {
+			font-size: 85%;
+			letter-spacing: -0.7px;
+			@include dm-bold;
+		}
+	}
+
+	&__via {
+		display: block;
+		letter-spacing: 0;
+		margin-top: 10px;
+		@include dm-regular;
+	}
+
+	&__row {
+		&--full {
+			flex-flow: column wrap;
+		}
+
+		background-color: #000;
+		display: flex;
+		flex: 1;
+		flex-flow: row wrap;
+	}
+
+	&__spec {
+		margin: 10px 0 0;
+	}
+
+	&__column {
+		display: inline-flex;
+		flex-flow: column wrap;
+		flex: 1;
+		padding-top: 10px;
+
+		&--full {
+			flex: 1 0 auto;
+			line-height: 1.3;
+			padding: 25px 0 5px;
+		}
+
+		&--left,
+		&--right {
+			display: inline-flex;
+			flex: 1 0 auto;
+		}
+
+		&--left {
+			align-content: flex-start;
+		}
+
+		&--right {
+			align-content: flex-end;
+			justify-content: center;
+		}
+	}
+}

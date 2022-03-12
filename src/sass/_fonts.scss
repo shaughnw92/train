@@ -1,0 +1,30 @@
+@import '../fonts/fonts';
+@import './mixins';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$normal: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$dot-matrix: 'Dot Matrix';
+$dm-tall: 'Dot Matrix Tall';
+$regular: 400;
+$semi-bold: 600;
+$bold: 700;
+
+@mixin dm-regular {
+	@include font($regular, $dot-matrix);
+}
+
+@mixin dm-bold {
+	@include font($bold, $dot-matrix);
+}
+
+@mixin dm-tall-bold {
+	@include font($bold, $dm-tall);
+}
+
+@mixin dm-tall-semi {
+	@include font($semi-bold, $dm-tall);
+}
+
+@mixin helvetica($weight) {
+	@include font($weight, $normal);
+}
